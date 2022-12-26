@@ -1,0 +1,12 @@
+E:\Ahmed Ramadan\web app\learnmvc.Models\bin\Debug\net6.0\learnmvc.Models.deps.json
+E:\Ahmed Ramadan\web app\learnmvc.Models\bin\Debug\net6.0\learnmvc.Models.dll
+E:\Ahmed Ramadan\web app\learnmvc.Models\bin\Debug\net6.0\learnmvc.Models.pdb
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.csproj.AssemblyReference.cache
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.AssemblyInfoInputs.cache
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.AssemblyInfo.cs
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.csproj.CoreCompileInputs.cache
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.dll
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\refint\learnmvc.Models.dll
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.pdb
+E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\ref\learnmvc.Models.dll

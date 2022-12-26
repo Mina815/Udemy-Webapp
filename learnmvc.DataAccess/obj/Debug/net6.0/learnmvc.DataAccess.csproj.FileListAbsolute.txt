@@ -1,0 +1,17 @@
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.csproj.AssemblyReference.cache
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.AssemblyInfoInputs.cache
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.AssemblyInfo.cs
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.csproj.CoreCompileInputs.cache
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\bin\Debug\net6.0\learnmvc.DataAccess.deps.json
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\bin\Debug\net6.0\learnmvc.DataAccess.runtimeconfig.json
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\bin\Debug\net6.0\learnmvc.DataAccess.dll
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\bin\Debug\net6.0\learnmvc.DataAccess.pdb
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\bin\Debug\net6.0\learnmvc.Models.dll
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\bin\Debug\net6.0\learnmvc.Models.pdb
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.csproj.CopyComplete
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.dll
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\refint\learnmvc.DataAccess.dll
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.pdb
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\learnmvc.DataAccess.genruntimeconfig.cache
+E:\Ahmed Ramadan\web app\learnmvc.DataAccess\obj\Debug\net6.0\ref\learnmvc.DataAccess.dll
