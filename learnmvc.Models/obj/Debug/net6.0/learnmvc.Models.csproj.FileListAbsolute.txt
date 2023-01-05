@@ -10,3 +10,15 @@ E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.dll
 E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\refint\learnmvc.Models.dll
 E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.pdb
 E:\Ahmed Ramadan\web app\learnmvc.Models\obj\Debug\net6.0\ref\learnmvc.Models.dll
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\bin\Debug\net6.0\learnmvc.Models.deps.json
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\bin\Debug\net6.0\learnmvc.Models.dll
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\bin\Debug\net6.0\learnmvc.Models.pdb
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.csproj.AssemblyReference.cache
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.AssemblyInfoInputs.cache
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.AssemblyInfo.cs
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.csproj.CoreCompileInputs.cache
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.dll
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\refint\learnmvc.Models.dll
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\learnmvc.Models.pdb
+D:\MVCSITE\Udemy-Webapp\learnmvc.Models\obj\Debug\net6.0\ref\learnmvc.Models.dll

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Ahmed Ramadan\\web app\\learnmvc.DataAccess\\learnmvc.DataAccess.csproj": {}
+    "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.DataAccess\\learnmvc.DataAccess.csproj": {}
   },
   "projects": {
-    "E:\\Ahmed Ramadan\\web app\\learnmvc.DataAccess\\learnmvc.DataAccess.csproj": {
+    "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.DataAccess\\learnmvc.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Ahmed Ramadan\\web app\\learnmvc.DataAccess\\learnmvc.DataAccess.csproj",
+        "projectUniqueName": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.DataAccess\\learnmvc.DataAccess.csproj",
         "projectName": "learnmvc.DataAccess",
-        "projectPath": "E:\\Ahmed Ramadan\\web app\\learnmvc.DataAccess\\learnmvc.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Basha\\.nuget\\packages\\",
-        "outputPath": "E:\\Ahmed Ramadan\\web app\\learnmvc.DataAccess\\obj\\",
+        "projectPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.DataAccess\\learnmvc.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Basha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Ahmed Ramadan\\web app\\learnmvc.Models\\learnmvc.Models.csproj": {
-                "projectPath": "E:\\Ahmed Ramadan\\web app\\learnmvc.Models\\learnmvc.Models.csproj"
+              "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj": {
+                "projectPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj"
               }
             }
           }
@@ -69,8 +69,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,21 +78,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Ahmed Ramadan\\web app\\learnmvc.Models\\learnmvc.Models.csproj": {
+    "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Ahmed Ramadan\\web app\\learnmvc.Models\\learnmvc.Models.csproj",
+        "projectUniqueName": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj",
         "projectName": "learnmvc.Models",
-        "projectPath": "E:\\Ahmed Ramadan\\web app\\learnmvc.Models\\learnmvc.Models.csproj",
-        "packagesPath": "C:\\Users\\Basha\\.nuget\\packages\\",
-        "outputPath": "E:\\Ahmed Ramadan\\web app\\learnmvc.Models\\obj\\",
+        "projectPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Basha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,8 +123,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -134,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

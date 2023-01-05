@@ -1,0 +1,12 @@
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\bin\Debug\net6.0\learnmvc.Utility.deps.json
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\bin\Debug\net6.0\learnmvc.Utility.dll
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\bin\Debug\net6.0\learnmvc.Utility.pdb
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.csproj.AssemblyReference.cache
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.AssemblyInfoInputs.cache
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.AssemblyInfo.cs
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.csproj.CoreCompileInputs.cache
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.dll
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\refint\learnmvc.Utility.dll
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.pdb
+D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\ref\learnmvc.Utility.dll
