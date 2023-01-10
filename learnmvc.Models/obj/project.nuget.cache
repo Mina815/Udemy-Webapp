@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8WNUWeT2RXqAUlTuQ+MZQhQeOzTNEndrDcN8H7Y+0wUMHzC4035Xg8siuFGbEW1Y4PsVUFvoQTeeb3sYVWVL1Q==",
+  "dgSpecHash": "5q5BmC5cZ1kj4MIZYBr4tS0Cto8/iMnfC4lGMrnl8kQ1JTtMbPr4Stbuo9xUfRm1d2y6OrVlH86dMAQr6E5+Mw==",
   "success": true,
-  "projectFilePath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj",
+  "projectFilePath": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\learnmvc.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

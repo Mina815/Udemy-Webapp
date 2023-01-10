@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\pc\\.nuget\\packages\\": {}
+    "C:\\Users\\master\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj",
+      "projectUniqueName": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\learnmvc.Models.csproj",
       "projectName": "learnmvc.Models",
-      "projectPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj",
-      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\obj\\",
+      "projectPath": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\learnmvc.Models.csproj",
+      "packagesPath": "C:\\Users\\master\\.nuget\\packages\\",
+      "outputPath": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\master\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

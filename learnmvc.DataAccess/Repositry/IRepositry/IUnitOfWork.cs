@@ -10,6 +10,7 @@ namespace learnmvc.DataAccess.Repositry.IRepositry
     {
         ICategoryRepositry Category { get; }
         ICoverTypeRepositry CoverType { get; }
+        IProductRepositry Product { get; }
         void Save();
     }
 }

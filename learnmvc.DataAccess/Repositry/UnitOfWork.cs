@@ -15,9 +15,11 @@ namespace learnmvc.DataAccess.Repositry
             _db = db;
             Category = new CategoryRepositry(_db);
             CoverType = new CoverTypeRepositry(_db);
+            Product = new ProductRepositry(_db);
         }
         public ICategoryRepositry Category { get; private set; }
         public ICoverTypeRepositry CoverType { get; private set; }
+        public IProductRepositry Product { get; private set; }
 
         public void Save()
         {

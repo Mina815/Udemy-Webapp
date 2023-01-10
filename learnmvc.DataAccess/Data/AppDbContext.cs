@@ -13,5 +13,6 @@ namespace learnmvc.DataAccess
         public DbSet<Course> courses { get; set; } 
         public DbSet<Category> Categories { get; set; } 
         public DbSet<CoverType> CoverTypes { get; set; } 
+        public DbSet<Product> Products { get; set; } 
     }
 }

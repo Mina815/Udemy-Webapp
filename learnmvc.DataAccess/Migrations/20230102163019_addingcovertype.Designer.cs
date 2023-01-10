@@ -72,7 +72,7 @@ namespace learnmvc.Migrations
                     b.ToTable("courses");
                 });
 
-            modelBuilder.Entity("learnmvc.Models.CoverType", b =>
+            modelBuilder.Entity("learnmvc.Models.product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -86,7 +86,7 @@ namespace learnmvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CoverTypes");
+                    b.ToTable("Products");
                 });
 #pragma warning restore 612, 618
         }

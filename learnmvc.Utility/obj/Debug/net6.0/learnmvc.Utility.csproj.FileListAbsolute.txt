@@ -10,3 +10,15 @@ D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.dll
 D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\refint\learnmvc.Utility.dll
 D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.pdb
 D:\MVCSITE\Udemy-Webapp\learnmvc.Utility\obj\Debug\net6.0\ref\learnmvc.Utility.dll
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\bin\Debug\net6.0\learnmvc.Utility.deps.json
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\bin\Debug\net6.0\learnmvc.Utility.dll
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\bin\Debug\net6.0\learnmvc.Utility.pdb
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.csproj.AssemblyReference.cache
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.GeneratedMSBuildEditorConfig.editorconfig
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.AssemblyInfoInputs.cache
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.AssemblyInfo.cs
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.csproj.CoreCompileInputs.cache
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.dll
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\refint\learnmvc.Utility.dll
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\learnmvc.Utility.pdb
+E:\Mina Latif\MYSITE\Webapp-MVC\learnmvc.Utility\obj\Debug\net6.0\ref\learnmvc.Utility.dll
