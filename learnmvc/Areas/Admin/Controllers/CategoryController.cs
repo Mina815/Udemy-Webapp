@@ -1,4 +1,6 @@
 ﻿using learnmvc.DataAccess;
+using learnmvc.DataAccess.Repositry;
+using learnmvc.DataAccess.Repositry.IRepositry;
 using learnmvc.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,16 +9,16 @@ namespace learnmvc.Areas.Admin.Controllers
 
     public class CategoryController : Controller
     {
-        private readonly AppDbContext _UnitOfWork;
-        public CategoryController(AppDbContext UnitOfWork)
+        private readonly IUnitOfWork _UnitOfWork;
+        public CategoryController(IUnitOfWork UnitOfWork)
         {
             _UnitOfWork = UnitOfWork;
         }
 
         public IActionResult Index()
         {
-            IEnumerable<Category> kolo = _UnitOfWork.Categories;
-            return View(kolo);
+            IEnumerable<Category> CategoryList = _UnitOfWork.Category.GetAll();
+            return View(CategoryList);
         }
         //GET
         public IActionResult Create()
@@ -30,8 +32,8 @@ namespace learnmvc.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _UnitOfWork.Categories.Add(item);
-                _UnitOfWork.SaveChanges();
+                _UnitOfWork.Category.Add(item);
+                _UnitOfWork.Save();
                 TempData["success"] = " Category Created Successfully";
                 return RedirectToAction("Index");
             }
@@ -41,7 +43,7 @@ namespace learnmvc.Areas.Admin.Controllers
         public IActionResult Edit(int? id)
         {
             if (id == null || id == 0) return NotFound();
-            var item = _UnitOfWork.Categories.FirstOrDefault(u => u.Id == id);
+            var item = _UnitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
             if (item == null) return NotFound();
 
             return View(item);
@@ -53,8 +55,8 @@ namespace learnmvc.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _UnitOfWork.Categories.Update(item);
-                _UnitOfWork.SaveChanges();
+                _UnitOfWork.Category.update(item);
+                _UnitOfWork.Save();
                 TempData["success"] = " Category Edited Successfully";
                 return RedirectToAction("Index");
             }
@@ -63,7 +65,7 @@ namespace learnmvc.Areas.Admin.Controllers
         //GET
         public IActionResult Delete(int? id)
         {
-            var item = _UnitOfWork.Categories.Find(id);
+            var item = _UnitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
             if (item == null) return NotFound();
 
             return View(item);
@@ -73,11 +75,11 @@ namespace learnmvc.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteCategory(int? id)
         {
-            var item = _UnitOfWork.Categories.Find(id);
+            var item = _UnitOfWork.Category.GetFirstOrDefault(u => u.Id ==id);
             if (item == null) return NotFound();
 
-            _UnitOfWork.Categories.Remove(item);
-            _UnitOfWork.SaveChanges();
+            _UnitOfWork.Category.Remove(item);
+            _UnitOfWork.Save();
             TempData["success"] = " Category Deleted Successfully";
             return RedirectToAction("Index");
         }

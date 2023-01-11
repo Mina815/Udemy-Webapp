@@ -1,4 +1,6 @@
 ﻿using learnmvc.DataAccess;
+using learnmvc.DataAccess.Repositry;
+using learnmvc.DataAccess.Repositry.IRepositry;
 using learnmvc.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,15 +8,15 @@ namespace learnmvc.Areas.Admin.Controllers
 {
     public class CoverTypeController : Controller
     {
-        private readonly AppDbContext _UnitOfWork;
-        public CoverTypeController(AppDbContext UnitOfWork)
+        private readonly IUnitOfWork _UnitOfWork;
+        public CoverTypeController(IUnitOfWork UnitOfWork)
         {
             _UnitOfWork = UnitOfWork;
         }
 
         public IActionResult Index()
         {
-            IEnumerable<CoverType> kolo = _UnitOfWork.CoverTypes;
+            IEnumerable<CoverType> kolo = _UnitOfWork.CoverType.GetAll();
             return View(kolo);
         }
         //GET
@@ -29,8 +31,8 @@ namespace learnmvc.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _UnitOfWork.CoverTypes.Add(item);
-                _UnitOfWork.SaveChanges();
+                _UnitOfWork.CoverType.Add(item);
+                _UnitOfWork.Save();
                 TempData["success"] = " CoverType Created Successfully";
                 return RedirectToAction("Index");
             }
@@ -40,7 +42,7 @@ namespace learnmvc.Areas.Admin.Controllers
         public IActionResult Edit(int? id)
         {
             if (id == null || id == 0) return NotFound();
-            var item = _UnitOfWork.CoverTypes.FirstOrDefault(u => u.Id == id);
+            var item = _UnitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
             if (item == null) return NotFound();
 
             return View(item);
@@ -52,8 +54,8 @@ namespace learnmvc.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _UnitOfWork.CoverTypes.Update(item);
-                _UnitOfWork.SaveChanges();
+                _UnitOfWork.CoverType.update(item);
+                _UnitOfWork.Save();
                 TempData["success"] = " CoverType Edited Successfully";
                 return RedirectToAction("Index");
             }
@@ -62,7 +64,7 @@ namespace learnmvc.Areas.Admin.Controllers
         //GET
         public IActionResult Delete(int? id)
         {
-            var item = _UnitOfWork.CoverTypes.FirstOrDefault(u => u.Id == id);
+            var item = _UnitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
             if (item == null) return NotFound();
 
             return View(item);
@@ -72,11 +74,11 @@ namespace learnmvc.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteCoverType(int? id)
         {
-            var item = _UnitOfWork.CoverTypes.FirstOrDefault(u => u.Id == id); 
+            var item = _UnitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id); 
             if (item == null) return NotFound();
 
-            _UnitOfWork.CoverTypes.Remove(item);
-            _UnitOfWork.SaveChanges();
+            _UnitOfWork.CoverType.Remove(item);
+            _UnitOfWork.Save();
             TempData["success"] = " CoverType Deleted Successfully";
             return RedirectToAction("Index");
         }

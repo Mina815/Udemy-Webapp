@@ -9,6 +9,7 @@ namespace learnmvc.DataAccess.Repositry.IRepositry
 {
     public interface ICategoryRepositry : IRepositry<Category>
     {
+        
         void update(Category obj);
     }
 }
