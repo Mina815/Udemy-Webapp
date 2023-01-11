@@ -68,20 +68,20 @@ namespace learnmvc.Areas.Admin.Controllers
           
             return View(ProductVM);
         }
-        ////POST
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Edit(CoverType item)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _UnitOfWork.CoverType.Update(item);
-        //        _UnitOfWork.SaveChanges();
-        //        TempData["success"] = " product Edited Successfully";
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(item);
-        //}
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert(ProductVM item, IFormFile file)
+        {
+            if (ModelState.IsValid)
+            {
+                //_UnitOfWork.Product.Update(item);
+                _UnitOfWork.Save();
+                TempData["success"] = " product Edited Successfully";
+                return RedirectToAction("Index");
+            }
+            return View(item);
+        }
         ////GET
         //public IActionResult Delete(int? id)
         //{
