@@ -10,9 +10,11 @@ namespace learnmvc.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _UnitOfWork;
-        public ProductController(IUnitOfWork UnitOfWork)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public ProductController(IUnitOfWork UnitOfWork, IWebHostEnvironment hostEnvironment)
         {
             _UnitOfWork = UnitOfWork;
+            _hostEnvironment = hostEnvironment;
         }
 
         public IActionResult Index()
@@ -37,31 +39,14 @@ namespace learnmvc.Areas.Admin.Controllers
                     Text= i.Name,
                     Value= i.Id.ToString(),
                 }),
-            };           
-            //IEnumerable<SelectListItem> CategoryList = _UnitOfWork.Category.GetAll().Select(
-            //    u => new SelectListItem
-            //    {
-            //        Text = u.Name,
-            //        Value = u.Id.ToString()
-            //    });
-            // IEnumerable<SelectListItem> CoverTypeList = _UnitOfWork.CoverType.GetAll().Select(
-            //    u => new SelectListItem
-            //    {
-            //        Text = u.Name,
-            //        Value = u.Id.ToString()
-            //    });
+            };         
 
-            if (id == null || id == 0)
-            {
-                //Create Product
-                //ViewBag.CategoryList = CategoryList;
-                //ViewData["CoverTypeList"] = CoverTypeList;
-                //return View(Product);
+            if (id == null || id == 0){
+                
                 return View(ProductVM);
 
             }
-            else
-            {
+            else{
                 //Update Product
 
             }
@@ -71,13 +56,26 @@ namespace learnmvc.Areas.Admin.Controllers
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(ProductVM item, IFormFile file)
+        public IActionResult Upsert(ProductVM item, IFormFile? file)
         {
+
             if (ModelState.IsValid)
             {
-                //_UnitOfWork.Product.Update(item);
+                String WWWRootPath = _hostEnvironment.WebRootPath;
+                if(file != null)
+                {
+                    String fileName = Guid.NewGuid().ToString();
+                    var Uploads = Path.Combine(WWWRootPath, @"Images\Product");
+                    var Extension = Path.GetExtension(file.FileName);
+                    using(var fileStream = new FileStream(Path.Combine(Uploads,fileName + Extension), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                    item.Product.ImageUrl = @"Images\Product" + fileName + Extension;
+                }
+                _UnitOfWork.Product.Add(item.Product);
                 _UnitOfWork.Save();
-                TempData["success"] = " product Edited Successfully";
+                TempData["success"] = " Product Added Successfully";
                 return RedirectToAction("Index");
             }
             return View(item);
@@ -103,5 +101,14 @@ namespace learnmvc.Areas.Admin.Controllers
         //    TempData["success"] = " product Deleted Successfully";
         //    return RedirectToAction("Index");
         //}
+
+        #region API Calls
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var ProductList = _UnitOfWork.Product.GetAll(includeProperties: "Category,CoverType,");
+            return Json(new {data = ProductList});
+        }
+        #endregion
     }
 }

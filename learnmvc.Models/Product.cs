@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -30,14 +31,17 @@ namespace learnmvc.Models
         [Required]
         [Range(1,10000)]
         public Double Price100 { get; set; }
+        [ValidateNever]
         public String ImageUrl { get; set; }
 
         [Required]
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
+        [ValidateNever]
         public Category Category { get; set; }
         [Required]
         public int CoverTypeId { get; set; }
+        [ValidateNever]
         public CoverType CoverType { get; set; }
 
 
