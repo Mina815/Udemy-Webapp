@@ -48,10 +48,10 @@ namespace learnmvc.Areas.Admin.Controllers
             }
             else{
                 //Update Product
-
+                ProductVM.Product = _UnitOfWork.Product.GetFirstOrDefault(u=>u.Id == id);
+                return View(ProductVM);
             }
           
-            return View(ProductVM);
         }
         //POST
         [HttpPost]
@@ -64,18 +64,40 @@ namespace learnmvc.Areas.Admin.Controllers
                 String WWWRootPath = _hostEnvironment.WebRootPath;
                 if(file != null)
                 {
+                    //Creating name for image
                     String fileName = Guid.NewGuid().ToString();
                     var Uploads = Path.Combine(WWWRootPath, @"Images\Product");
                     var Extension = Path.GetExtension(file.FileName);
+
+                    //check if there is an img exists to remove it for Update
+                    if(item.Product.ImageUrl!= null)
+                    {
+                        var OldImgPath = Path.Combine(WWWRootPath,item.Product.ImageUrl.TrimStart('\\'));
+                        if(System.IO.File.Exists(OldImgPath))
+                        {
+                            System.IO.File.Delete(OldImgPath);
+                        }
+                    }
                     using(var fileStream = new FileStream(Path.Combine(Uploads,fileName + Extension), FileMode.Create))
                     {
                         file.CopyTo(fileStream);
                     }
-                    item.Product.ImageUrl = @"Images\Product" + fileName + Extension;
+                    item.Product.ImageUrl = @"\Images\Product\" + fileName + Extension;
+                };
+
+                if (item.Product.Id == 0)
+                {
+                    _UnitOfWork.Product.Add(item.Product);
+                    _UnitOfWork.Save();
+                    TempData["success"] = " Product Added Successfully";
                 }
-                _UnitOfWork.Product.Add(item.Product);
-                _UnitOfWork.Save();
-                TempData["success"] = " Product Added Successfully";
+                else { 
+                    _UnitOfWork.Product.update(item.Product);        
+                    _UnitOfWork.Save();
+                    TempData["success"] = " Product Updated Successfully";
+                
+                }
+
                 return RedirectToAction("Index");
             }
             return View(item);
@@ -88,19 +110,7 @@ namespace learnmvc.Areas.Admin.Controllers
 
         //    return View(item);
         //}
-        ////POST
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult DeleteCoverType(int? id)
-        //{
-        //    var item = _UnitOfWork.CoverTypes.FirstOrDefault(u => u.Id == id); 
-        //    if (item == null) return NotFound();
-
-        //    _UnitOfWork.CoverTypes.Remove(item);
-        //    _UnitOfWork.SaveChanges();
-        //    TempData["success"] = " product Deleted Successfully";
-        //    return RedirectToAction("Index");
-        //}
+        
 
         #region API Calls
         [HttpGet]
@@ -108,6 +118,32 @@ namespace learnmvc.Areas.Admin.Controllers
         {
             var ProductList = _UnitOfWork.Product.GetAll(includeProperties: "Category,CoverType,");
             return Json(new {data = ProductList});
+        }
+
+        //POST
+        [HttpDelete]
+        public IActionResult Delete(int? id)
+        {
+            var item = _UnitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
+
+            if (item == null)
+            {
+                return Json(new {success= false, message = "Error while deleting"});
+            }
+            //deleting the image
+            if (item.ImageUrl != null)
+            {
+                var OldImgPath = Path.Combine(_hostEnvironment.WebRootPath, item.ImageUrl.TrimStart('\\'));
+                if (System.IO.File.Exists(OldImgPath))
+                {
+                    System.IO.File.Delete(OldImgPath);
+                }
+            }
+
+            _UnitOfWork.Product.Remove(item);
+            _UnitOfWork.Save();
+            return Json(new { success = true, message = "Delete Successful" });
+            
         }
         #endregion
     }
