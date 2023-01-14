@@ -43,7 +43,7 @@ namespace learnmvc.Areas.Admin.Controllers
         public IActionResult Edit(int? id)
         {
             if (id == null || id == 0) return NotFound();
-            var item = _UnitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
+            var item = _UnitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
             if (item == null) return NotFound();
 
             return View(item);
