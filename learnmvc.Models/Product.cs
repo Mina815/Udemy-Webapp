@@ -11,11 +11,10 @@ namespace learnmvc.Models
 {
     public class Product
     {
-        [Key]
         public int Id { get; set; }
         [Required]
         public String Name { get; set; }
-        [Required]
+        
         public String Decribtion { get; set; }
         [Required]
         public String ISBN { get; set; }
@@ -40,7 +39,6 @@ namespace learnmvc.Models
         [Required]
         [Display(Name= "Category")]
         public int CategoryId { get; set; }
-        [ForeignKey("CategoryId")]
         [ValidateNever]
         public Category Category { get; set; }
         [Required]

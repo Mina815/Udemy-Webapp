@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace learnmvc.Areas.Admin.Controllers
 {
+
+    [Area("Admin")]
     public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _UnitOfWork;

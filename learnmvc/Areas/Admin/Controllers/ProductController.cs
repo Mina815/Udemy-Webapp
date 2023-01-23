@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace learnmvc.Areas.Admin.Controllers
 {
+
+    [Area("Admin")]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _UnitOfWork;

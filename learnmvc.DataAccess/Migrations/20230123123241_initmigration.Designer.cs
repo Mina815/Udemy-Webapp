@@ -9,18 +9,18 @@ using learnmvc.DataAccess;
 
 #nullable disable
 
-namespace learnmvc.Migrations
+namespace learnmvc.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230110143805_addproducttobase")]
-    partial class addproducttobase
+    [Migration("20230123123241_initmigration")]
+    partial class initmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0")
+                .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -48,31 +48,7 @@ namespace learnmvc.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("learnmvc.Models.Course", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("courses");
-                });
-
-            modelBuilder.Entity("learnmvc.Models.product", b =>
+            modelBuilder.Entity("learnmvc.Models.CoverType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -86,7 +62,7 @@ namespace learnmvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("CoverTypes");
                 });
 
             modelBuilder.Entity("learnmvc.Models.Product", b =>
@@ -152,7 +128,7 @@ namespace learnmvc.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("learnmvc.Models.product", "product")
+                    b.HasOne("learnmvc.Models.CoverType", "CoverType")
                         .WithMany()
                         .HasForeignKey("CoverTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -160,7 +136,7 @@ namespace learnmvc.Migrations
 
                     b.Navigation("Category");
 
-                    b.Navigation("product");
+                    b.Navigation("CoverType");
                 });
 #pragma warning restore 612, 618
         }
