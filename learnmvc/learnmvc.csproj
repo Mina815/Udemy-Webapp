@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\learnmvc.DataAccess\learnmvc.DataAccess.csproj" />
+    <ProjectReference Include="..\learnmvc.Utility\learnmvc.Utility.csproj" />
   </ItemGroup>
 
   <ItemGroup>
