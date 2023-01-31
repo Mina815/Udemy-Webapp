@@ -12,6 +12,8 @@ namespace learnmvc.DataAccess.Repositry.IRepositry
         ICoverTypeRepositry CoverType { get; }
         IProductRepositry Product { get; }
         ICompanyRepositry Company { get; }
+        IShoppingCartRepositry ShoppingCart { get; }
+        IApplicationUserRepositry ApplicationUser { get; }
         void Save();
     }
 }

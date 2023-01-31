@@ -16,6 +16,7 @@ namespace learnmvc.DataAccess
         public DbSet<Product> Products { get; set; } 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Company> Companys { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set;}
 
     }
 }

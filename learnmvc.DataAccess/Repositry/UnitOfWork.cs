@@ -17,11 +17,15 @@ namespace learnmvc.DataAccess.Repositry
             CoverType = new CoverTypeRepositry(_db);
             Product = new ProductRepositry(_db);
             Company = new CompanyRepositry(_db);
+            ShoppingCart = new ShoppingCartRepositry(_db);
+            ApplicationUser= new ApplicationUserRepositry(_db);
         }
         public ICategoryRepositry Category { get; private set; }
         public ICoverTypeRepositry CoverType { get; private set; }
         public IProductRepositry Product { get; private set; }
         public ICompanyRepositry Company { get; private set; }
+        public IShoppingCartRepositry ShoppingCart { get; private set; }
+        public IApplicationUserRepositry ApplicationUser { get; private set; }
 
         public void Save()
         {

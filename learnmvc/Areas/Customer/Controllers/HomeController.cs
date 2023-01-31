@@ -1,7 +1,9 @@
 ﻿using learnmvc.DataAccess.Repositry.IRepositry;
 using learnmvc.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace learnmvc.Areas.Customer.Controllers
 {
@@ -22,14 +24,29 @@ namespace learnmvc.Areas.Customer.Controllers
             IEnumerable<Product> ProductList = _unitOfWork.Product.GetAll(includeProperties:"Category,CoverType");
             return View(ProductList);
         }
-        public IActionResult Details(int id)
+        public IActionResult Details(int productId)
         {
             ShoppingCart Cart = new()
             {
+                ProductId= productId,
                 Count = 1,
-                Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id, includeProperties: "Category,CoverType"),
+                Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == productId, includeProperties: "Category,CoverType"),
             };
             return View(Cart);
+        }
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public IActionResult Details(ShoppingCart shoppingCart)
+        {
+           // shoppingCart.Id = 0;
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var Claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            shoppingCart.ApplicationUserId = Claim.Value;
+
+            _unitOfWork.ShoppingCart.Add(shoppingCart);
+            _unitOfWork.Save();
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Privacy()
