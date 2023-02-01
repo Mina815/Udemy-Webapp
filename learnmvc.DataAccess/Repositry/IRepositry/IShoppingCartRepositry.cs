@@ -9,6 +9,8 @@ namespace learnmvc.DataAccess.Repositry.IRepositry
 {
     public interface IShoppingCartRepositry : IRepositry<ShoppingCart>
     {
+        int IncrementCount(ShoppingCart shoppingCart, int count);
+        int DecrementCount(ShoppingCart shoppingCart, int count);
        
     }
 }

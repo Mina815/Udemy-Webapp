@@ -44,7 +44,16 @@ namespace learnmvc.Areas.Customer.Controllers
             var Claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             shoppingCart.ApplicationUserId = Claim.Value;
 
+            ShoppingCart cartFromDb = _unitOfWork.ShoppingCart.GetFirstOrDefault(
+                u=>u.ApplicationUserId== Claim.Value && u.ProductId == shoppingCart.ProductId);
+
+            if(cartFromDb == null) {
             _unitOfWork.ShoppingCart.Add(shoppingCart);
+            }
+            else
+            {
+                _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
+            }
             _unitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
