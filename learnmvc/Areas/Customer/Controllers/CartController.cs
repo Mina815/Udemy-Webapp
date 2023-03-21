@@ -33,7 +33,32 @@ namespace learnmvc.Areas.Customer.Controllers
             }
             return View(ShoppingCartVM);
         }
-        private double GetPrice(double quantity, double price,double price50, double price100)
+        public IActionResult Plus(int cartID)
+        {
+            var cart = _UnitOfWork.ShoppingCart.GetFirstOrDefault(u => u.Id == cartID);
+			_UnitOfWork.ShoppingCart.IncrementCount(cart, 1);
+			_UnitOfWork.Save();
+            return RedirectToAction(nameof(Index));
+        }
+		public IActionResult Minus(int cartID)
+		{
+			var cart = _UnitOfWork.ShoppingCart.GetFirstOrDefault(u => u.Id == cartID);
+			_UnitOfWork.ShoppingCart.DecrementCount(cart, 1);
+            if(cart.Count < 1)
+            {
+                _UnitOfWork.ShoppingCart.Remove(cart);
+            }
+			_UnitOfWork.Save();
+			return RedirectToAction(nameof(Index));
+		}
+		public IActionResult Remove(int cartID)
+		{
+			var cart = _UnitOfWork.ShoppingCart.GetFirstOrDefault(u => u.Id == cartID);
+            _UnitOfWork.ShoppingCart.Remove(cart);
+			_UnitOfWork.Save();
+			return RedirectToAction(nameof(Index));
+		}
+		private double GetPrice(double quantity, double price,double price50, double price100)
         {
             if (quantity <= 50) return price;
             else {
