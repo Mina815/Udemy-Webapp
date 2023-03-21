@@ -757,19 +757,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\master\\.nuget\\packages\\": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Utility\\learnmvc.Utility.csproj",
+      "projectUniqueName": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Utility\\learnmvc.Utility.csproj",
       "projectName": "learnmvc.Utility",
-      "projectPath": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Utility\\learnmvc.Utility.csproj",
-      "packagesPath": "C:\\Users\\master\\.nuget\\packages\\",
-      "outputPath": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Utility\\obj\\",
+      "projectPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Utility\\learnmvc.Utility.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Utility\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\master\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -816,7 +816,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

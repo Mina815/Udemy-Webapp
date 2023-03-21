@@ -9,7 +9,7 @@ namespace learnmvc.DataAccess.Repositry.IRepositry
 {
     public interface IRepositry<T> where T : class
     {
-        IEnumerable<T> GetAll(String? includeProperties = null);
+        IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, String? includeProperties = null);
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entity);

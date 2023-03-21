@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\learnmvc.Models.csproj": {}
+    "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj": {}
   },
   "projects": {
-    "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\learnmvc.Models.csproj": {
+    "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\learnmvc.Models.csproj",
+        "projectUniqueName": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj",
         "projectName": "learnmvc.Models",
-        "projectPath": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\learnmvc.Models.csproj",
-        "packagesPath": "C:\\Users\\master\\.nuget\\packages\\",
-        "outputPath": "E:\\Mina Latif\\MYSITE\\Webapp-MVC\\learnmvc.Models\\obj\\",
+        "projectPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\learnmvc.Models.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\MVCSITE\\Udemy-Webapp\\learnmvc.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\master\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
