@@ -33,7 +33,11 @@ namespace learnmvc.Areas.Customer.Controllers
             }
             return View(ShoppingCartVM);
         }
-        public IActionResult Plus(int cartID)
+		public IActionResult Summary()
+		{
+			return View();
+		}
+		public IActionResult Plus(int cartID)
         {
             var cart = _UnitOfWork.ShoppingCart.GetFirstOrDefault(u => u.Id == cartID);
 			_UnitOfWork.ShoppingCart.IncrementCount(cart, 1);
@@ -58,6 +62,7 @@ namespace learnmvc.Areas.Customer.Controllers
 			_UnitOfWork.Save();
 			return RedirectToAction(nameof(Index));
 		}
+       
 		private double GetPrice(double quantity, double price,double price50, double price100)
         {
             if (quantity <= 50) return price;

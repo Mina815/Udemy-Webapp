@@ -1,4 +1,5 @@
 ﻿using learnmvc.DataAccess.Repositry.IRepositry;
+using learnmvc.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,8 @@ namespace learnmvc.DataAccess.Repositry
             Company = new CompanyRepositry(_db);
             ShoppingCart = new ShoppingCartRepositry(_db);
             ApplicationUser= new ApplicationUserRepositry(_db);
+            OrderHeader = new OrderHeaderRepositry(_db);
+            OrderDetail = new OrderDetailRepositry(_db);
         }
         public ICategoryRepositry Category { get; private set; }
         public ICoverTypeRepositry CoverType { get; private set; }
@@ -26,6 +29,8 @@ namespace learnmvc.DataAccess.Repositry
         public ICompanyRepositry Company { get; private set; }
         public IShoppingCartRepositry ShoppingCart { get; private set; }
         public IApplicationUserRepositry ApplicationUser { get; private set; }
+        public IOrderHeaderRepositry OrderHeader { get; private set; }
+        public IOrderDetailRepositry OrderDetail { get; private set; }
 
         public void Save()
         {
