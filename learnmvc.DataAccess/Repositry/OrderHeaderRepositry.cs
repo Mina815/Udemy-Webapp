@@ -36,5 +36,12 @@ namespace learnmvc.DataAccess.Repositry
                 }
             }
 		}
+		public void UpdateStripePaymentId(int id, string sessionId, string paymentIntentId)
+		{
+			var order = _db.OrderHeaders.FirstOrDefault(u => u.Id == id);
+			order.SessionId = sessionId;
+            order.PaymentIntentId = paymentIntentId;
+
+		}
 	}
 }
