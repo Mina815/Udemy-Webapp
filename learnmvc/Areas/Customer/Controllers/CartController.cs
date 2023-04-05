@@ -86,7 +86,7 @@ namespace learnmvc.Areas.Customer.Controllers
 			}
 			ApplicationUser applicationUser = _UnitOfWork.ApplicationUser.GetFirstOrDefault(u=> u.Id == Claim.Value);
 			//If the user is a company user or not 
-			if (applicationUser.CompanyId.Value == null)
+			if (applicationUser.CompanyId.GetValueOrDefault() == 0)
 			{
 				ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
 				ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusPending;
@@ -112,7 +112,7 @@ namespace learnmvc.Areas.Customer.Controllers
 				_UnitOfWork.Save();
 
 			}
-			if (applicationUser.CompanyId.Value == null)
+			if (applicationUser.CompanyId.GetValueOrDefault() == 0)
 			{
 				// stripe sittings
 				var Domain = "https://localhost:44317/";

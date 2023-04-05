@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace learnmvc.Models.ViewModels
 {
-	internal class OrderVM
+	public class OrderVM
 	{
+		public OrderHeader OrderHeader { get; set; }
+		IEnumerable<OrderDetail> OrderDetail { get; set; }
 	}
 }
