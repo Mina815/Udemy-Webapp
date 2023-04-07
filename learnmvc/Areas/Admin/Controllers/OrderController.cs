@@ -2,13 +2,16 @@
 using learnmvc.DataAccess.Repositry.IRepositry;
 using learnmvc.Models;
 using learnmvc.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 
 namespace learnmvc.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+	[Authorize]
 	public class OrderController : Controller
 	{
 		private readonly IUnitOfWork _UnitOfWork;
@@ -24,7 +27,14 @@ namespace learnmvc.Areas.Admin.Controllers
 		public IActionResult GetAll(string status)
 		{
 			IEnumerable<OrderHeader> orderHeaders;
-			orderHeaders = _UnitOfWork.OrderHeader.GetAll(includeProperties: "ApplicationUser");
+			if(User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_User_Indi))
+				orderHeaders = _UnitOfWork.OrderHeader.GetAll(includeProperties: "ApplicationUser");
+			else
+			{
+				var ClaimIdentity = (ClaimsIdentity)User.Identity;
+				var Claim = ClaimIdentity.FindFirst(ClaimTypes.NameIdentifier);
+				orderHeaders = _UnitOfWork.OrderHeader.GetAll(u=>u.ApplicationUserId == Claim.Value,includeProperties: "ApplicationUser");
+			}
             switch (status)
             {
                 case "pending":
